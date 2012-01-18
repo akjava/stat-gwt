@@ -42,6 +42,12 @@ this.domElement.style.left = '0px';
 this.domElement.style.top = '0px';
 }-*/;
 
+public final native void setPosition(int x,int y)/*-{
+this.domElement.style.position = 'absolute';
+this.domElement.style.left = x+'px';
+this.domElement.style.top = y+'px';
+}-*/;
+
 public  final native void update() /*-{
 this.update();
 }-*/;
@@ -67,7 +73,14 @@ else{
 }
 }-*/;
 
+public  final native void setVisible(boolean bool) /*-{
+if(bool){
+	this.domElement.style.visibility="visible";
+}else{
+	this.domElement.style.visibility="hidden";
+}
 
+}-*/;
 
 public  final native Element domElement() /*-{
 return this.domElement;

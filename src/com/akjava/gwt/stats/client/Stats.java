@@ -48,10 +48,20 @@ this.domElement.style.left = x+'px';
 this.domElement.style.top = y+'px';
 }-*/;
 
+/**
+ * @deprecated for old version use begin() and end()
+ */
 public  final native void update() /*-{
 this.update();
 }-*/;
 
+public  final native void begin() /*-{
+this.begin();
+}-*/;
+
+public  final native void end() /*-{
+this.end();
+}-*/;
 public static final Stats insertStatsToRootPanel(){
 	if(!avaiable()){
 		GWT.log("did you forget add line or stats.js https://github.com/mrdoob/stats.js/blob/master/build/Stats.js");
